@@ -6,7 +6,7 @@ Este projeto implementa um sistema de biodigestão utilizando um microcontrolado
 
 ## Problema Resolvido
 
-O projeto visa facilitar a operação e o monitoramento de sistemas de biodigestão, fornecendo dados precisos em tempo real sobre as condições do ambiente, o que pode ser crucial para o desempenho eficiente do processo de biodigestão.
+O projeto visa facilitar o monitoramento de sistemas de biodigestão, fornecendo dados precisos em tempo real sobre as condições do ambiente, o que pode ser crucial para o desempenho eficiente do processo de biodigestão.
 
 ## Componentes Utilizados
 
