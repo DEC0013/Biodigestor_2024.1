@@ -14,6 +14,7 @@ O projeto visa facilitar o monitoramento de sistemas de biodigestão, fornecendo
  - DHT11 (sensor de temperatura e umidade)
  - BMP280 (sensor de pressão atmosférica)
  - MQ-2 (sensor de gás)
+ - Relé (simular a válvula)
 
 ## Arquitetura do Projeto
 
