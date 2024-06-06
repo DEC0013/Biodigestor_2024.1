@@ -15,7 +15,7 @@ O projeto visa facilitar a operação e o monitoramento de sistemas de biodigest
 
 O projeto segue uma arquitetura onde o ESP32 coleta dados dos sensores e os envia para a plataforma Adafruit via protocolo MQTT. A plataforma Adafruit recebe os dados e os exibe em um dashboard online, permitindo o monitoramento remoto do sistema de biodigestão.
 
-![Arquitetura do Projeto](./images/architecture.png)
+![Arquitetura do Projeto](./arch.jpg)
 
 ## Funcionamento dos Sensores no Projeto de Biodigestor
 
