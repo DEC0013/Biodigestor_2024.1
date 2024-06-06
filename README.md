@@ -1,4 +1,4 @@
-# Biodigestor com ESP32 e Sensores
+# Sistema de monitoramento de um biodigestor com ESP32 e Sensores
 
 ## Problema Resolvido
 
@@ -33,17 +33,25 @@ No projeto de biodigestor, diferentes sensores desempenham funções específica
 
 O sensor MQ-2 é fundamental para detectar a presença de gases combustíveis, como metano, que podem representar riscos de vazamentos durante o processo de biodigestão. Conectado ao ESP32, o sensor fornece dados sobre a concentração de gás, permitindo alertas em tempo real caso níveis perigosos sejam detectados.
 
+(Adicionar se achou algum erro no código e como resolveu ou alguma observação importante)
+
 ### Sensor DHT11 (Medição de Temperatura Ambiente)
 
 O sensor DHT11 é posicionado próximo ao biodigestor para medir a temperatura ambiente. Esses dados são cruciais para monitorar o processo de biodigestão, permitindo ajustes conforme necessário para otimizar o desempenho do sistema.
+
+(Adicionar se achou algum erro no código e como resolveu ou alguma observação importante)
 
 ### Sensor BMP280 (Medição de Pressão e Temperatura Interna)
 
 O sensor BMP280 é colocado dentro do biodigestor para monitorar a pressão atmosférica e a temperatura interna. Conectado ao ESP32, fornece informações sobre as condições dentro do biodigestor, permitindo intervenções preventivas se necessário.
 
+(Adicionar se achou algum erro no código e como resolveu ou alguma observação importante)
+
 ### Integração com a Plataforma Adafruit IO
 
 Todos os dados coletados pelos sensores (MQ-2, DHT11 e BMP280) serão enviados para a plataforma Adafruit IO por meio de um ESP32. Isso permite que os dados sejam visualizados e analisados em tempo real pelos operadores, proporcionando um monitoramento abrangente do sistema de biodigestão.
+
+(Adicionar se achou algum erro no código e como resolveu ou alguma observação importante)
 
 ## Configuração de Software
 
@@ -63,7 +71,7 @@ Todos os dados coletados pelos sensores (MQ-2, DHT11 e BMP280) serão enviados p
 
 
 Observações Gerais:
--
+
 -
 
 Certifique-se de ajustar as configurações de acordo com as especificações do seu projeto.
@@ -79,7 +87,8 @@ O código-fonte foi desenvolvido na Arduino IDE, uma plataforma de desenvolvimen
 3. Instale todas as bibliotecas necessárias mencionadas no arquivo `xxxxxxxx` localizado na pasta `xxxxxxxxxxx`.
 
 ### Programa Final
-A pasta Programas ESP/ProgramaFinal contém o código-fonte consolidado que será executado no ESP32. Inclui a integração dos códigos de todos os sensores utilizados.
+
+A pasta Programas XXXXXXXXX contém o código-fonte consolidado que será executado no ESP32. Inclui a integração dos códigos de todos os sensores utilizados.
 
 ## Tabela de Conteúdos
 
