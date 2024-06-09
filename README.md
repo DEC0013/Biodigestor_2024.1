@@ -51,7 +51,7 @@ O sensor BMP280 é colocado dentro do biodigestor para monitorar a pressão atmo
 
 Todos os dados coletados pelos sensores (MQ-2, DHT11 e BMP280) serão enviados para a plataforma Adafruit IO por meio de um ESP32. Isso permite que os dados sejam visualizados e analisados em tempo real pelos operadores, proporcionando um monitoramento abrangente do sistema de biodigestão.
 
-(Adicionar se achou algum erro no código e como resolveu ou alguma observação importante)
+No link a seguir estará o passo-a-passo da integração com o [adafruit](https://github.com/JulioAmaral007/Biodigestor/tree/main/passo-a-passo-adafruit).
 
 ## Configuração de Software
 
@@ -84,7 +84,7 @@ O código-fonte foi desenvolvido na Arduino IDE, uma plataforma de desenvolvimen
 
 1. Instale a última versão da Arduino IDE a partir do [site oficial](https://www.arduino.cc/en/software).
 2. Configure a Arduino IDE para suportar o ESP32 seguindo as instruções disponíveis na [documentação do ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html).
-3. Instale todas as bibliotecas necessárias mencionadas no arquivo `xxxxxxxx` localizado na pasta `xxxxxxxxxxx`.
+3. Instale todas as bibliotecas necessárias mencionadas no arquivo [bibliotecas](./bibliotecas.txt).
 
 ### Programa Final
 
