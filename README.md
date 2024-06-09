@@ -104,8 +104,7 @@ A pasta Programas XXXXXXXXX contém o código-fonte consolidado que será execut
 Para executar o projeto localmente, siga estas etapas:
 
 1. **Pré-requisitos**:
-   - Node.js
-   - Python
+   - Arduino IDE
    - Bibliotecas do Arduino IDE (para ESP32 e sensores)
 
 2. **Instalação das Dependências**:
