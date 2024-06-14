@@ -1,3 +1,44 @@
+
+# Como usar com ESP32 – Sensor de Umidade e Temperatura DHT11
+
+## Descrição
+
+O sensor MQ-2 é fundamental para detectar a presença de gases combustíveis, como metano, que podem representar riscos de vazamentos durante o processo de biodigestão. Conectado ao ESP32, o sensor fornece dados sobre a concentração de gás, permitindo alertas em tempo real caso níveis perigosos sejam detectados.
+
+OBS 1: o Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2 deve ser utilizado para propósitos experimentais. Não recomendamos o uso do mesmo em projetos profissionais ou que envolva segurança humana ou ambiental. Além disso, não nos responsabilizamos por eventuais danos.
+
+## Especificações e características:
+
+ - Controlador: LM393
+ - Tensão de operação: 5VDC
+ - Concentração de detecção: 300 – 10.000ppm
+ - Detecção: fumaça, gás natural, metano, propano, butano, GLP, hidrogênio e outros inflamáveis
+ - Saída Digital e Analógica
+ - LED indicador para  presença de tensão
+ - LED indicador para saída digital
+ - Sensibilidade ajustável através de trimpot
+
+## Datasheet:
+
+[Datasheet MQ-2](https://github.com/JulioAmaral007/Biodigestor/blob/main/Sensores/Sensor-MQ2/Datasheet%20MQ2.pdf)
+
+## Aplicações:
+
+Projetos com Arduino ou outras plataformas microcontroladas em que seja necessário fazer a detecção de fumaça, gás natural, metano, propano, butano, GLP, hidrogênio e outros inflamáveis.
+
+## Proposta da prática:
+
+Utilizar o Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2 em conjunto com o ESP32 e acender um LED sempre que o sensor fizer a detecção da presença do gás exalado pelo isqueiro.
+
+## Lista dos itens necessários:
+
+ - ESP32 com Cabo USB
+ - Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2
+ - Cabos Jumper macho-fêmea
+
+## Código:
+
+```bash
 #include <Wire.h>
 #include <WiFi.h>
 #include "Adafruit_MQTT.h"
@@ -91,3 +132,4 @@ void loop() {
        Serial.println(F("Sent!"));
     } 
 }
+```

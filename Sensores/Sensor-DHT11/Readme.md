@@ -1,5 +1,5 @@
 
-# Como usar com Arduino – Sensor de Umidade e Temperatura DHT11
+# Como usar com ESP32 – Sensor de Umidade e Temperatura DHT11
 
 ## Descrição
 
@@ -19,15 +19,15 @@ O sensor DHT11 é posicionado próximo ao biodigestor para medir a temperatura a
 
 ## Datasheet:
 
-[Datasheet DHT]()
+[Datasheet DHT](https://github.com/JulioAmaral007/Biodigestor/blob/main/Sensores/Sensor-DHT11/Datasheet%20DHT11.pdf)
 
 ## Aplicações:
 
-Projetos com finalidade de medir umidade e temperatura ambiente utilizando Arduino ou outras plataformas microcontroladas.
+Projetos com finalidade de medir umidade e temperatura ambiente utilizando ESP32 ou outras plataformas microcontroladas.
 
 ## Proposta da prática:
 
-Utilizar o Sensor de Umidade e Temperatura DHT11 em conjunto com o Arduino e medir umidade e temperatura ambiente. O valor da umidade e da temperatura serão exibidos no monitor serial do ambiente de programação do Arduino.
+Utilizar o Sensor de Umidade e Temperatura DHT11 em conjunto com o ESP32 e medir umidade e temperatura ambiente. O valor da umidade e da temperatura serão exibidos no monitor serial do ambiente de programação do ESP32.
 
 ## Lista dos itens necessários:
 

@@ -23,29 +23,17 @@ O projeto do biodigestor foi estruturado de forma modular, segmentando o hardwar
 ### Componentes Utilizados
 
 - ESP32 (microcontrolador)
-- [DHT11 (sensor de temperatura e umidade)]()
-- BMP280 (sensor de pressão atmosférica)
-- MQ-2 (sensor de gás)
+- [DHT11 (sensor de temperatura e umidade)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-DHT11)
+- [BMP280 (sensor de pressão atmosférica)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-BMP280)
+- [MQ-2 (sensor de gás)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-MQ2)
 
 No projeto de biodigestor, diferentes sensores desempenham funções específicas para monitorar as condições ambientais e garantir a eficiência e segurança do sistema. Aqui está como cada sensor funcionará:
-
-### Sensor MQ-2 (Detecção de Gases Combustíveis)
-
-O sensor MQ-2 é fundamental para detectar a presença de gases combustíveis, como metano, que podem representar riscos de vazamentos durante o processo de biodigestão. Conectado ao ESP32, o sensor fornece dados sobre a concentração de gás, permitindo alertas em tempo real caso níveis perigosos sejam detectados.
-
-(Adicionar se achou algum erro no código e como resolveu ou alguma observação importante)
-
-### Sensor BMP280 (Medição de Pressão e Temperatura Interna)
-
-O sensor BMP280 é colocado dentro do biodigestor para monitorar a pressão atmosférica e a temperatura interna. Conectado ao ESP32, fornece informações sobre as condições dentro do biodigestor, permitindo intervenções preventivas se necessário.
-
-(Adicionar se achou algum erro no código e como resolveu ou alguma observação importante)
 
 ### Integração com a Plataforma Adafruit IO
 
 Todos os dados coletados pelos sensores (MQ-2, DHT11 e BMP280) serão enviados para a plataforma Adafruit IO por meio de um ESP32. Isso permite que os dados sejam visualizados e analisados em tempo real pelos operadores, proporcionando um monitoramento abrangente do sistema de biodigestão.
 
-No link a seguir estará o passo-a-passo da integração com o [adafruit](https://github.com/JulioAmaral007/Biodigestor/tree/main/passo-a-passo-adafruit).
+No link a seguir estará o passo-a-passo da integração com o [adafruit](https://github.com/JulioAmaral007/Biodigestor/tree/main/Adafruit).
 
 ## Configuração de Software
 
@@ -86,10 +74,9 @@ A pasta Programas XXXXXXXXX contém o código-fonte consolidado que será execut
 
 ## Tabela de Conteúdos
 
-- [Problema Resolvido](#problema-resolvido)
+- [Proposta](#proposta)
 - [Componentes Utilizados](#componentes-utilizados)
 - [Arquitetura do Projeto](#arquitetura-do-projeto)
-- [Funcionamento dos Sensores no Projeto de Biodigestor](#funcionamento-dos-sensores-no-projeto-de-biodigestor)
 - [Integração com a Plataforma Adafruit IO](#integração-com-a-plataforma-adafruit-io)
 - [Instruções de Execução](#instruções-de-execução)
 

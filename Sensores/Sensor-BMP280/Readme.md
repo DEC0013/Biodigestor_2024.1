@@ -1,3 +1,44 @@
+
+# Como usar com ESP32 – Sensor de Pressão e Temperatura BMP280
+
+## Descrição
+
+O sensor BMP280 é colocado dentro do biodigestor para monitorar a pressão atmosférica e a temperatura interna. Conectado ao ESP32, fornece informações sobre as condições dentro do biodigestor, permitindo intervenções preventivas se necessário.
+
+OBS: este sensor possui interface de comunicação I2C e SPI. Para esta prática, foi utilizado comunicação I2C.
+
+## Especificações e características:
+
+ - Controlador: BMP280
+ - Tensão de operação: 3,3VDC
+ - Corrente de operação: 2,7µA
+ - Faixa de Pressão: 300 a 1100hPa
+ - Precisão da pressão: ±0,12hPa
+ - Temperatura: -40º a 85º celsius
+ - Precisão da temperatura: 1ºC
+ - Interface de comunicação: I2C / SPI
+
+## Datasheet:
+
+[Datasheet DHT](https://github.com/JulioAmaral007/Biodigestor/blob/main/Sensores/Sensor-BMP280/Datasheet%20BMP280.pdf)
+
+## Aplicações:
+
+Projetos com ESP32 ou outras plataformas microcontroladas em que seja necessário fazer a medição de pressão atmosférica, temperatura e altitude.
+
+## Proposta da prática:
+
+Utilizar o Sensor de Pressão e Temperatura BMP280 em conjunto com o ESP32 e obter informações de pressão atmosférica, temperatura e altitude. Estas informações serão exibidas no monitor serial do ambiente de programação do ESP32.
+
+## Lista dos itens necessários:
+
+ - ESP32 com Cabo USB
+ - Sensor de Pressão e Temperatura BMP280
+ - Cabos Jumper macho-fêmea
+
+## Código:
+
+```bash
 #include <Wire.h>
 #include <Adafruit_BMP280.h>
 #include <WiFi.h>
@@ -116,3 +157,4 @@ Adafruit_BMP280 bmp;
        Serial.println(F("Sent!"));
     } 
 }
+```
