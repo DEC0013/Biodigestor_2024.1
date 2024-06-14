@@ -39,22 +39,13 @@ No link a seguir estará o passo-a-passo da integração com o [adafruit](https:
 
 ### Pinagem
 
-| Pino (Nome no Código) | Número do Pino | Arquivo               | Observações                                                    |
-| --------------------- | -------------- | --------------------- | -------------------------------------------------------------- |
-| `xxxxxxx`             | xx             | xxxxxxxxxxxxxxx       | xxxxxxxxxxxxxxxxx                                              |
-| `xxxxxxx`             | xx             | xxxxxxxxxxxxxxx       | xxxxxxxxxxxxxxxxx                                              |
-| `xxxxxxx`             | xx             | xxxxxxxxxxxxxxx       | xxxxxxxxxxxxxxxxx                                              |
-| `xxxxxxx`             | xx             | xxxxxxxxxxxxxxx       | xxxxxxxxxxxxxxxxx                                              |
-| `xxxxxxx`             | xx             | xxxxxxxxxxxxxxx       | xxxxxxxxxxxxxxxxx                                              |
-| `xxxxxxx`             | xx             | xxxxxxxxxxxxxxx       | xxxxxxxxxxxxxxxxx                                              |
-| `xxxxxxx`             | xx             | xxxxxxxxxxxxxxx       | xxxxxxxxxxxxxxxxx                                              |
-| `xxxxxxx`             | xx             | xxxxxxxxxxxxxxx       | xxxxxxxxxxxxxxxxx                                              |
-| `xxxxxxx`             | xx             | xxxxxxxxxxxxxxx       | xxxxxxxxxxxxxxxxx                                              |
-
-
-Observações Gerais:
-
--
+| Pino (Nome no Código) | Número do Pino | Observações                                                                     |
+| --------------------- | -------------- | ------------------------------------------------------------------------------- |
+| `DHTPIN`              | 4              | Utilizado para leitura de dados do sensor DHT11                                 |
+| `MQ2PIN`              | 35             | Utilizado para leitura de dados do sensor MQ2                                   |
+| `RELAY`               | 14             | Utlizado para controle do relé                                                  |
+| `SDA`                 | 21             | Utilizado como barramento de dados da comunicação I2C dos sensores BMP280       |
+| `SCL`                 | 22             | Utilizado como sinal de clock da comunicação I2C dos sensores BMP280            |
 
 Certifique-se de ajustar as configurações de acordo com as especificações do seu projeto.
 

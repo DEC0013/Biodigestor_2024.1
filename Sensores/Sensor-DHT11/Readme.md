@@ -37,6 +37,8 @@ Utilizar o Sensor de Umidade e Temperatura DHT11 em conjunto com o ESP32 e medir
 
 ## Código:
 
+OBS: É necessário checar a pinagem do DHT11 ou o módulo em que está integrado para que não ocorra erros de leitura, há diferente versões online, detalhe que atrasou os testes do sensor no projeto.
+
 ```bash
 #include "DHT.h"
 #include <WiFi.h>

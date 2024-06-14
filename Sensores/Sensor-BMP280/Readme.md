@@ -20,7 +20,7 @@ OBS: este sensor possui interface de comunicação I2C e SPI. Para esta prática
 
 ## Datasheet:
 
-[Datasheet DHT](https://github.com/JulioAmaral007/Biodigestor/blob/main/Sensores/Sensor-BMP280/Datasheet%20BMP280.pdf)
+[Datasheet BMP280](https://github.com/JulioAmaral007/Biodigestor/blob/main/Sensores/Sensor-BMP280/Datasheet%20BMP280.pdf)
 
 ## Aplicações:
 
@@ -37,6 +37,8 @@ Utilizar o Sensor de Pressão e Temperatura BMP280 em conjunto com o ESP32 e obt
  - Cabos Jumper macho-fêmea
 
 ## Código:
+
+OBS: Sobre o BMP280, é importante que seja verificado qual endereço o sensor está usando, visto que é possível alternar entre 0x76 e 0x77 alimentando o pino com a nomenclatura Data Out(SDO/SPI) a 5V ou ao GND, assim como é factível alternar entre a comunicação I2C e SPI, alimentando o pino Chip Select Bus a 5V ou ao GND. De acordo com as conexões acima, é necessário alterar algumas funções no código como bmp.begin(endereço do BMP280) e outras que são essenciais para a escolha do tipo de comunicação(I2C/SPI). Essas particularidades do BMP280 podem atrasar o desenvolvimento do projeto se não verificadas, pois dependendo das conexões dos pinos citados acima, o código recebe alterações relevantes que se não ajustadas prejudicam o funcionamento do sensor.
 
 ```bash
 #include <Wire.h>
