@@ -23,7 +23,7 @@ O projeto do biodigestor foi estruturado de forma modular, segmentando o hardwar
 ### Componentes Utilizados
 
 - ESP32 (microcontrolador)
-- DHT11 (sensor de temperatura e umidade)
+- [DHT11 (sensor de temperatura e umidade)]()
 - BMP280 (sensor de pressão atmosférica)
 - MQ-2 (sensor de gás)
 
@@ -32,12 +32,6 @@ No projeto de biodigestor, diferentes sensores desempenham funções específica
 ### Sensor MQ-2 (Detecção de Gases Combustíveis)
 
 O sensor MQ-2 é fundamental para detectar a presença de gases combustíveis, como metano, que podem representar riscos de vazamentos durante o processo de biodigestão. Conectado ao ESP32, o sensor fornece dados sobre a concentração de gás, permitindo alertas em tempo real caso níveis perigosos sejam detectados.
-
-(Adicionar se achou algum erro no código e como resolveu ou alguma observação importante)
-
-### Sensor DHT11 (Medição de Temperatura Ambiente)
-
-O sensor DHT11 é posicionado próximo ao biodigestor para medir a temperatura ambiente. Esses dados são cruciais para monitorar o processo de biodigestão, permitindo ajustes conforme necessário para otimizar o desempenho do sistema.
 
 (Adicionar se achou algum erro no código e como resolveu ou alguma observação importante)
 
