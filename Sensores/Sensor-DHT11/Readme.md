@@ -5,6 +5,8 @@
 
 O sensor DHT11 é posicionado próximo ao biodigestor para medir a temperatura ambiente. Esses dados são cruciais para monitorar o processo de biodigestão, permitindo ajustes conforme necessário para otimizar o desempenho do sistema.
 
+![SensorDHT11](./dht11.jpg)
+
 ## Especificações e características:
 
  - Tensão de operação: 3,5 a 5,5VDC

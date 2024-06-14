@@ -7,6 +7,8 @@ O sensor BMP280 é colocado dentro do biodigestor para monitorar a pressão atmo
 
 OBS: este sensor possui interface de comunicação I2C e SPI. Para esta prática, foi utilizado comunicação I2C.
 
+![SensorBMP280](./bmp280.jpg)
+
 ## Especificações e características:
 
  - Controlador: BMP280
