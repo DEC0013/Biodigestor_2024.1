@@ -27,15 +27,21 @@ O sensor DHT11 é posicionado próximo ao biodigestor para medir a temperatura a
 
 Projetos com finalidade de medir umidade e temperatura ambiente utilizando ESP32 ou outras plataformas microcontroladas.
 
-## Proposta da prática:
+ ### Pinagem
 
-Utilizar o Sensor de Umidade e Temperatura DHT11 em conjunto com o ESP32 e medir umidade e temperatura ambiente. O valor da umidade e da temperatura serão exibidos no monitor serial do ambiente de programação do ESP32.
+| Pino          | Saída      | Pino no ESP32          |
+| ------------- | ---------- | ---------------------- |
+| `xxxxxx`      | 4          | xxxxxxxxxxxxxxxxxxxxxx |
+| `xxxxxx`      | 35         | xxxxxxxxxxxxxxxxxxxx   |
+| `xxxxx`       | 14         | xxxxxxxxxxxxxxxxx      |
+| `xxx`         | 21         | xxxxxxxxxxxxxxxx       |
+| `xxx`         | 22         | xxxxxxx xxxx           |
 
-## Lista dos itens necessários:
+## Bibliotecas
 
- - ESP32 com Cabo USB
- - Sensor de Umidade e Temperatura – DHT11
- - Cabos Jumper macho-fêmea
+```bash 
+  Escreva aqui as bibliotecas
+```
 
 ## Código:
 

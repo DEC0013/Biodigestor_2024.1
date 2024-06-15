@@ -53,12 +53,6 @@ Certifique-se de ajustar as configurações de acordo com as especificações do
 
 O código-fonte foi desenvolvido na Arduino IDE, uma plataforma de desenvolvimento que permite a escrita, compilação e upload de programas para placas compatíveis com Arduino, como o ESP32 utilizado neste projeto.
 
-### Instalação
-
-1. Instale a última versão da Arduino IDE a partir do [site oficial](https://www.arduino.cc/en/software).
-2. Configure a Arduino IDE para suportar o ESP32 seguindo as instruções disponíveis na [documentação do ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html).
-3. Instale todas as bibliotecas necessárias mencionadas no arquivo [bibliotecas](./bibliotecas.txt).
-
 ### Programa Final
 
 A pasta Programas XXXXXXXXX contém o código-fonte consolidado que será executado no ESP32. Inclui a integração dos códigos de todos os sensores utilizados.
@@ -76,23 +70,17 @@ A pasta Programas XXXXXXXXX contém o código-fonte consolidado que será execut
 Para executar o projeto localmente, siga estas etapas:
 
 1. **Pré-requisitos**:
-   - Arduino IDE
-   - Bibliotecas do Arduino IDE (para ESP32 e sensores)
+   - Instale a última versão da Arduino IDE a partir do [site oficial](https://www.arduino.cc/en/software).
+   - Configure a Arduino IDE para suportar o ESP32 seguindo as instruções disponíveis na [documentação do ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html).
+   - Instale todas as bibliotecas necessárias mencionadas no arquivo [bibliotecas](./bibliotecas.txt).
 
-2. **Instalação das Dependências**:
-   ```bash
-   # Instalar bibliotecas do Arduino IDE
-   Instale as bibliotecas DHT, Adafruit BMP280 e Adafruit MQTT.
-   ```
-
-3. **Execução da Aplicação**:
+2. **Execução da Aplicação**:
    - **Carregar o Código no ESP32**:
      1. Conecte o ESP32 ao seu computador.
      2. Abra o Arduino IDE.
-     3. Carregue os códigos fornecidos para cada sensor no ESP32.
-        - [Código MQ-2](https://github.com/JulioAmaral007/Biodigestor/blob/main/C%C3%B3digos/codigo_mq2.txt)
-        - [Código DHT11](https://github.com/JulioAmaral007/Biodigestor/blob/main/C%C3%B3digos/codigo_dht.txt)
-        - [Código BMP280](https://github.com/JulioAmaral007/Biodigestor/blob/main/C%C3%B3digos/codigo_bmp.txt)
+     3. Carregue o código no ESP32.
+        - [Código Final](xxxxxxxxxx)
    - **Monitoramento via Adafruit IO**:
      1. Configure suas credenciais no código para conexão com a Adafruit IO.
      2. Verifique os dados em tempo real no dashboard da Adafruit IO.
+     3. Caso precise no link a seguir estará o passo-a-passo da integração com o [adafruit](https://github.com/JulioAmaral007/Biodigestor/tree/main/Adafruit).

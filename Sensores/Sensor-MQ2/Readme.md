@@ -9,7 +9,7 @@ OBS: o Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2 deve ser utiliza
 
 ![SensorMQ2](./mq2.jpg)
 
-## Especificações e características:
+## Especificações e características
 
  - Controlador: LM393
  - Tensão de operação: 5VDC
@@ -20,25 +20,31 @@ OBS: o Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2 deve ser utiliza
  - LED indicador para saída digital
  - Sensibilidade ajustável através de trimpot
 
-## Datasheet:
+## Datasheet
 
 [Datasheet MQ-2](https://github.com/JulioAmaral007/Biodigestor/blob/main/Sensores/Sensor-MQ2/Datasheet%20MQ2.pdf)
 
-## Aplicações:
+## Aplicações
 
 Projetos com Arduino ou outras plataformas microcontroladas em que seja necessário fazer a detecção de fumaça, gás natural, metano, propano, butano, GLP, hidrogênio e outros inflamáveis.
 
-## Proposta da prática:
+### Pinagem
 
-Utilizar o Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2 em conjunto com o ESP32 e acender um LED sempre que o sensor fizer a detecção da presença do gás exalado pelo isqueiro.
+| Pino          | Saída      | Pino no ESP32          |
+| ------------- | ---------- | ---------------------- |
+| `xxxxxx`      | 4          | xxxxxxxxxxxxxxxxxxxxxx |
+| `xxxxxx`      | 35         | xxxxxxxxxxxxxxxxxxxx   |
+| `xxxxx`       | 14         | xxxxxxxxxxxxxxxxx      |
+| `xxx`         | 21         | xxxxxxxxxxxxxxxx       |
+| `xxx`         | 22         | xxxxxxx xxxx           |
 
-## Lista dos itens necessários:
+## Bibliotecas
 
- - ESP32 com Cabo USB
- - Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2
- - Cabos Jumper macho-fêmea
+```bash 
+  Escreva aqui as bibliotecas
+```
 
-## Código:
+## Código
 
 OBS: É necessário que o sensor seja alimentado com uma tensão de 5V, assim como o ESP32, para que consiga realizar a leitura precisa dos dados analógicos.
 

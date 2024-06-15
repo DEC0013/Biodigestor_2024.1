@@ -28,15 +28,21 @@ OBS: este sensor possui interface de comunicação I2C e SPI. Para esta prática
 
 Projetos com ESP32 ou outras plataformas microcontroladas em que seja necessário fazer a medição de pressão atmosférica, temperatura e altitude.
 
-## Proposta da prática:
+### Pinagem
 
-Utilizar o Sensor de Pressão e Temperatura BMP280 em conjunto com o ESP32 e obter informações de pressão atmosférica, temperatura e altitude. Estas informações serão exibidas no monitor serial do ambiente de programação do ESP32.
+| Pino          | Saída      | Pino no ESP32          |
+| ------------- | ---------- | ---------------------- |
+| `xxxxxx`      | 4          | xxxxxxxxxxxxxxxxxxxxxx |
+| `xxxxxx`      | 35         | xxxxxxxxxxxxxxxxxxxx   |
+| `xxxxx`       | 14         | xxxxxxxxxxxxxxxxx      |
+| `xxx`         | 21         | xxxxxxxxxxxxxxxx       |
+| `xxx`         | 22         | xxxxxxx xxxx           |
 
-## Lista dos itens necessários:
+## Bibliotecas
 
- - ESP32 com Cabo USB
- - Sensor de Pressão e Temperatura BMP280
- - Cabos Jumper macho-fêmea
+```bash 
+  Escreva aqui as bibliotecas
+```
 
 ## Código:
 
