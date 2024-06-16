@@ -32,7 +32,7 @@ Projetos com Arduino ou outras plataformas microcontroladas em que seja necessá
 
 | Pino          | Saída      | Pino no ESP32          |
 | ------------- | ---------- | ---------------------- |
-| <code style="color : name_color">VCC(+5V)</code>    | 4          | xxxxxxxxxxxxxxxxxxxxxx |
+| <code style="color : red">VCC(+5V)</code>    | 4          | xxxxxxxxxxxxxxxxxxxxxx |
 | `xxxxxx`      | 35         | xxxxxxxxxxxxxxxxxxxx   |
 | `xxxxx`       | 14         | xxxxxxxxxxxxxxxxx      |
 | `xxx`         | 21         | xxxxxxxxxxxxxxxx       |
