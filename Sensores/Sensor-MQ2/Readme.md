@@ -14,11 +14,11 @@ OBS: o Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2 deve ser utiliza
  - Controlador: LM393;
  - Tensão de operação: 5VDC;
  - Concentração de detecção: 300 – 10.000ppm;
- - Detecção: fumaça, gás natural, metano, propano, butano, GLP, hidrogênio e outros inflamáveis
+ - Detecção: fumaça, gás natural, metano, propano, butano, GLP, hidrogênio e outros inflamáveis;
  - Saída Digital e Analógica;
  - LED indicador para  presença de tensão;
  - LED indicador para saída digital;
- - Sensibilidade ajustável através de trimpot;
+ - Sensibilidade ajustável através de trimpot.
 
 ## Datasheet:
 
@@ -37,6 +37,38 @@ Projetos com Arduino ou outras plataformas microcontroladas em que seja necessá
 | `xxxxx`       | 14         | xxxxxxxxxxxxxxxxx      |
 | `xxx`         | 21         | xxxxxxxxxxxxxxxx       |
 | `xxx`         | 22         | xxxxxxx xxxx           |
+
+<table style="text-align:center">
+          <thead>
+              <tr>
+                <th style="text-align:center">Pino</th>
+                <th style="text-align:center">Saída</th>
+                <th style="text-align:center">Pino no ESP-32</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td style="color: red"> VCC(+5V) </td>
+                <td>1</td>
+                <td>Módulo 5V</td>
+              </tr>
+              <tr>
+                <td style="color: gray"> GND </td>
+                <td>2</td>
+                <td>XX</td>
+              </tr>
+              <tr>
+                <td style="color: violet">Digital Out</td>
+                <td>3</td>
+                <td>NC</td>
+              </tr>
+              <tr>
+                <td style="color: lime">Analog Out</td>
+                <td>4</td>
+                <td>35</td>
+              </tr>
+          </tbody>
+     </table>
 
 ## Bibliotecas:
 
