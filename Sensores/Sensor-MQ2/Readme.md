@@ -32,43 +32,11 @@ Projetos com Arduino ou outras plataformas microcontroladas em que seja necessá
 
 | Pino          | Saída      | Pino no ESP32          |
 | ------------- | ---------- | ---------------------- |
-| ${{\color{Red}\Huge{\textsf{  VCC(+5V) \}}}}\$    | 4          | xxxxxxxxxxxxxxxxxxxxxx |
-| `xxxxxx`      | 35         | xxxxxxxxxxxxxxxxxxxx   |
-| `xxxxx`       | 14         | xxxxxxxxxxxxxxxxx      |
-| `xxx`         | 21         | xxxxxxxxxxxxxxxx       |
-| `xxx`         | 22         | xxxxxxx xxxx           |
+| ${{\color{Red}\Huge{\textsf{  VCC(+5V) \}}}}\$    | 1          | Módulo 5V |
+| ${{\color{Gray}\Huge{\textsf{  GND \}}}}\$      | 2         | XX   |
+| ${{\color{Violet}\Huge{\textsf{  Digital\ Out\ \}}}}\$       | 3         | NC      |
+| ${{\color{Lime}\Huge{\textsf{  Analog\ Out\ \}}}}\$        | 4         | 35       |
 
-<table style="text-align:center">
-          <thead>
-              <tr>
-                <th style="text-align:center">Pino</th>
-                <th style="text-align:center">Saída</th>
-                <th style="text-align:center">Pino no ESP-32</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                <td style="color: #FF0000"> VCC(+5V) </td>
-                <td>1</td>
-                <td>Módulo 5V</td>
-              </tr>
-              <tr>
-                <td style="color: gray"> GND </td>
-                <td>2</td>
-                <td>XX</td>
-              </tr>
-              <tr>
-                <td style="color: violet">Digital Out</td>
-                <td>3</td>
-                <td>NC</td>
-              </tr>
-              <tr>
-                <td style="color: lime">Analog Out</td>
-                <td>4</td>
-                <td>35</td>
-              </tr>
-          </tbody>
-     </table>
 
 ## Bibliotecas:
 
