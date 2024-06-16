@@ -1,23 +1,23 @@
 
 # Como usar com ESP32 – Sensor de Umidade e Temperatura DHT11
 
-## Descrição
+## Descrição:
 
 O sensor DHT11 é posicionado próximo ao biodigestor para medir a temperatura ambiente. Esses dados são cruciais para monitorar o processo de biodigestão, permitindo ajustes conforme necessário para otimizar o desempenho do sistema.
 
-![SensorDHT11](./dht11.jpg)
+![SensorDHT11](./DHT11.jpg)
 
 ## Especificações e características:
 
- - Tensão de operação: 3,5 a 5,5VDC
- - Corrente de operação: 0,3mA
- - Corrente de operação (em stand by): 60µA
- - Resolução: 16 bits
- - Faixa de medição (umidade): 20 a 90%
- - Faixa de medição (temperatura): 0º a 50º celsius
- - Precisão (umidade): ±5%
- - Precisão (temperatura): ±2º celsius
- - Tempo de resposta: 2s
+ - Tensão de operação: 3,5 a 5,5VDC;
+ - Corrente de operação: 0,3mA;
+ - Corrente de operação (em stand by): 60µA;
+ - Resolução: 16 bits;
+ - Faixa de medição (umidade): 20 a 90%;
+ - Faixa de medição (temperatura): 0º a 50º celsius;
+ - Precisão (umidade): ±5%;
+ - Precisão (temperatura): ±2º celsius;
+ - Tempo de resposta: 2s.
 
 ## Datasheet:
 
@@ -27,20 +27,20 @@ O sensor DHT11 é posicionado próximo ao biodigestor para medir a temperatura a
 
 Projetos com finalidade de medir umidade e temperatura ambiente utilizando ESP32 ou outras plataformas microcontroladas.
 
- ### Pinagem
+ ### Pinagem:
 
 | Pino          | Saída      | Pino no ESP32          |
 | ------------- | ---------- | ---------------------- |
-| `xxxxxx`      | 4          | xxxxxxxxxxxxxxxxxxxxxx |
-| `xxxxxx`      | 35         | xxxxxxxxxxxxxxxxxxxx   |
-| `xxxxx`       | 14         | xxxxxxxxxxxxxxxxx      |
-| `xxx`         | 21         | xxxxxxxxxxxxxxxx       |
-| `xxx`         | 22         | xxxxxxx xxxx           |
+| ${{\color{Red}\Huge{\textsf{  VCC \}}}}\$      | 1          | xxx |
+| ${{\color{Lime}\Huge{\textsf{  Data \}}}}\$       | 2         | 4  |
+| ${{\color{Goldenrod}\Huge{\textsf{  N/C \}}}}\$       | 3         | NC      |
+| ${{\color{Gray}\Huge{\textsf{  GND \}}}}\$         | 4         | XX      |
 
-## Bibliotecas
+
+## Bibliotecas:
 
 ```bash 
-  Escreva aqui as bibliotecas
+  #include "DHT.h"
 ```
 
 ## Código:
