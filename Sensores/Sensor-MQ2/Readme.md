@@ -1,5 +1,5 @@
 
-# Como usar com ESP32 – Sensor de Umidade e Temperatura DHT11
+# Como usar com ESP32 – Sensor de Gás MQ2
 
 ## Descrição
 
