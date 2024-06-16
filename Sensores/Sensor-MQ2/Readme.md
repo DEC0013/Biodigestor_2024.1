@@ -41,7 +41,7 @@ Projetos com Arduino ou outras plataformas microcontroladas em que seja necessá
 ## Bibliotecas
 
 ```bash 
-  Escreva aqui as bibliotecas
+  #include <MQUnifiedsensor.h>
 ```
 
 ## Código
@@ -49,10 +49,20 @@ Projetos com Arduino ou outras plataformas microcontroladas em que seja necessá
 OBS: É necessário que o sensor seja alimentado com uma tensão de 5V, assim como o ESP32, para que consiga realizar a leitura precisa dos dados analógicos.
 
 ```bash
+
 #include <Wire.h>
 #include <WiFi.h>
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
+#include <MQUnifiedsensor.h>
+
+#define         Board                   ("ESP-32") 
+#define         Pin                     (35) 
+#define         Type                    ("MQ-2") 
+#define         Voltage_Resolution      (3.3) 
+#define         ADC_Bit_Resolution      (12) 
+#define         RatioMQ2CleanAir        (9.83) 
+MQUnifiedsensor MQ2(Board, Voltage_Resolution, ADC_Bit_Resolution, Pin, Type);
 
 #define WLAN_SSID       ""
 #define WLAN_PASS       ""
@@ -67,13 +77,42 @@ WiFiClient client;
 Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
 Adafruit_MQTT_Publish Gas = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/gas1");
 
-#define sensor 4
+void setup()
+{
 
+  Serial.begin(115200); 
+  delay(10);
 
-void setup() {
-    
-    Serial.begin(115200);
+  MQ2.setRegressionMethod(1); //_PPM =  a*ratio^b
+  MQ2.setA(574.25); MQ2.setB(-2.222); // Configure the equation to to calculate LPG concentration
+  
+/*
+    Exponential regression:
+    Gas    | a      | b
+    H2     | 987.99 | -2.162
+    LPG    | 574.25 | -2.222
+    CO     | 36974  | -3.109
+    Alcohol| 3616.1 | -2.675
+    Propane| 658.71 | -2.168
+*/
 
+  MQ2.init(); 
+ 
+  Serial.print("Calibrating please wait.");
+  float calcR0 = 0;
+  for(int i = 1; i<=10; i ++)
+  {
+    MQ2.update(); 
+    calcR0 += MQ2.calibrate(RatioMQ2CleanAir);
+    Serial.print(".");
+  }
+  MQ2.setR0(calcR0/10);
+  Serial.println("  done!.");
+  
+  if(isinf(calcR0)) {Serial.println("Warning: Conection issue, R0 is infinite (Open circuit detected) please check your wiring and supply"); while(1);}
+  if(calcR0 == 0){Serial.println("Warning: Conection issue found, R0 is zero (Analog pin shorts to ground) please check your wiring and supply"); while(1);}
+
+  
     Serial.println(WLAN_SSID);
     WiFi.begin(WLAN_SSID, WLAN_PASS);
     while (WiFi.status() != WL_CONNECTED)
@@ -88,7 +127,6 @@ void setup() {
  
     // connect to adafruit io
     connect();
-
 }
 
 void connect()
@@ -117,29 +155,34 @@ void connect()
   Serial.println(F("Adafruit IO Connected!"));
 }
 
-void loop() {
-    
-      // ping adafruit io a few times to make sure we remain connected
+void loop()
+{
+  
+    // ping adafruit io a few times to make sure we remain connected
     if(! mqtt.ping(3))
     {
     // reconnect to adafruit io
     if(! mqtt.connected())
       connect();
     }
-    
-    int value = analogRead(sensor);
-    value = map(value, 0, 4095, 0, 100);
-
-    Serial.print("GAS Level :");
-    Serial.println(value);
-
-    delay(5000);
-
-    if (!Gas.publish(value)) {               //Publish Temperature data to Adafruit
+  
+  
+  MQ2.update(); 
+  float gaslevel = MQ2.readSensor();
+  Serial.print(gaslevel); 
+  Serial.println(" PPM");
+ 
+  if (!Gas.publish(gaslevel)) {               
       Serial.println(F("Failed"));
     }
-    else{
+  else{
        Serial.println(F("Sent!"));
     } 
+
+   delay(20000);
+
 }
+
+
+
 ```
