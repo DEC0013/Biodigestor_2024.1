@@ -11,14 +11,14 @@ OBS: o Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2 deve ser utiliza
 
 ## Especificações e características:
 
- - Controlador: LM393
- - Tensão de operação: 5VDC
- - Concentração de detecção: 300 – 10.000ppm
+ - Controlador: LM393;
+ - Tensão de operação: 5VDC;
+ - Concentração de detecção: 300 – 10.000ppm;
  - Detecção: fumaça, gás natural, metano, propano, butano, GLP, hidrogênio e outros inflamáveis
- - Saída Digital e Analógica
- - LED indicador para  presença de tensão
- - LED indicador para saída digital
- - Sensibilidade ajustável através de trimpot
+ - Saída Digital e Analógica;
+ - LED indicador para  presença de tensão;
+ - LED indicador para saída digital;
+ - Sensibilidade ajustável através de trimpot;
 
 ## Datasheet:
 
