@@ -1,24 +1,24 @@
 
 # Como usar com ESP32 – Sensor de Pressão e Temperatura BMP280
 
-## Descrição
+## Descrição:
 
 O sensor BMP280 é colocado dentro do biodigestor para monitorar a pressão atmosférica e a temperatura interna. Conectado ao ESP32, fornece informações sobre as condições dentro do biodigestor, permitindo intervenções preventivas se necessário.
 
 OBS: este sensor possui interface de comunicação I2C e SPI. Para esta prática, foi utilizado comunicação I2C.
 
-![SensorBMP280](./bmp280.jpg)
+![SensorBMP280](./BMP280.jpg)
 
 ## Especificações e características:
 
- - Controlador: BMP280
- - Tensão de operação: 3,3VDC
- - Corrente de operação: 2,7µA
- - Faixa de Pressão: 300 a 1100hPa
- - Precisão da pressão: ±0,12hPa
- - Temperatura: -40º a 85º celsius
- - Precisão da temperatura: 1ºC
- - Interface de comunicação: I2C / SPI
+ - Controlador: BMP280;
+ - Tensão de operação: 3,3VDC;
+ - Corrente de operação: 2,7µA;
+ - Faixa de Pressão: 300 a 1100hPa;
+ - Precisão da pressão: ±0,12hPa;
+ - Temperatura: -40º a 85º celsius;
+ - Precisão da temperatura: 1ºC;
+ - Interface de comunicação: I2C / SPI.
 
 ## Datasheet:
 
@@ -28,20 +28,21 @@ OBS: este sensor possui interface de comunicação I2C e SPI. Para esta prática
 
 Projetos com ESP32 ou outras plataformas microcontroladas em que seja necessário fazer a medição de pressão atmosférica, temperatura e altitude.
 
-### Pinagem
+### Pinagem:
 
 | Pino          | Saída      | Pino no ESP32          |
 | ------------- | ---------- | ---------------------- |
-| `xxxxxx`      | 4          | xxxxxxxxxxxxxxxxxxxxxx |
-| `xxxxxx`      | 35         | xxxxxxxxxxxxxxxxxxxx   |
-| `xxxxx`       | 14         | xxxxxxxxxxxxxxxxx      |
-| `xxx`         | 21         | xxxxxxxxxxxxxxxx       |
-| `xxx`         | 22         | xxxxxxx xxxx           |
+| ${{\color{Red}\Huge{\textsf{  VCC \}}}}\$      | 1          | XX |
+| ${{\color{Gray}\Huge{\textsf{  GND \}}}}\$      | 2         | XX   |
+| ${{\color{Lime}\Huge{\textsf{  SCL \}}}}\$       | 3         | 22      |
+| ${{\color{Blue}\Huge{\textsf{  SDA \}}}}\$        | 4         | 21       |
+| ${{\color{Goldenrod}\Huge{\textsf{  CSB \}}}}\$         | 5         | NC           |
+| ${{\color{Violet}\Huge{\textsf{  SDA \}}}}\$         | 6         | NC           |
 
-## Bibliotecas
+## Bibliotecas:
 
 ```bash 
-  Escreva aqui as bibliotecas
+  #include <Adafruit_BMP280.h>
 ```
 
 ## Código:
