@@ -1,7 +1,7 @@
 
 # Como usar com ESP32 – Sensor de Gás MQ2
 
-## Descrição
+## Descrição:
 
 O sensor MQ-2 é fundamental para detectar a presença de gases combustíveis, como metano, que podem representar riscos de vazamentos durante o processo de biodigestão. Conectado ao ESP32, o sensor fornece dados sobre a concentração de gás, permitindo alertas em tempo real caso níveis perigosos sejam detectados.
 
@@ -9,7 +9,7 @@ OBS: o Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2 deve ser utiliza
 
 ![SensorMQ2](./MQ2.jpg)
 
-## Especificações e características
+## Especificações e características:
 
  - Controlador: LM393
  - Tensão de operação: 5VDC
@@ -20,15 +20,15 @@ OBS: o Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2 deve ser utiliza
  - LED indicador para saída digital
  - Sensibilidade ajustável através de trimpot
 
-## Datasheet
+## Datasheet:
 
 [Datasheet MQ-2](https://github.com/JulioAmaral007/Biodigestor/blob/main/Sensores/Sensor-MQ2/Datasheet%20MQ2.pdf)
 
-## Aplicações
+## Aplicações:
 
 Projetos com Arduino ou outras plataformas microcontroladas em que seja necessário fazer a detecção de fumaça, gás natural, metano, propano, butano, GLP, hidrogênio e outros inflamáveis.
 
-### Pinagem
+### Pinagem:
 
 | Pino          | Saída      | Pino no ESP32          |
 | ------------- | ---------- | ---------------------- |
@@ -38,13 +38,13 @@ Projetos com Arduino ou outras plataformas microcontroladas em que seja necessá
 | `xxx`         | 21         | xxxxxxxxxxxxxxxx       |
 | `xxx`         | 22         | xxxxxxx xxxx           |
 
-## Bibliotecas
+## Bibliotecas:
 
 ```bash 
   #include <MQUnifiedsensor.h>
 ```
 
-## Código
+## Código:
 
 OBS: É necessário que o sensor seja alimentado com uma tensão de 5V, assim como o ESP32, para que consiga realizar a leitura precisa dos dados analógicos.
 
