@@ -35,7 +35,7 @@ Projetos com ESP32 ou outras plataformas microcontroladas em que seja necessári
 | ${{\color{Red}\Huge{\textsf{  VCC \}}}}\$      | 1          | XX |
 | ${{\color{Gray}\Huge{\textsf{  GND \}}}}\$      | 2         | XX   |
 | ${{\color{Lime}\Huge{\textsf{  SCL \}}}}\$       | 3         | 22      |
-| ${{\color{Navyblue}\Huge{\textsf{  SDA \}}}}\$        | 4         | 21       |
+| ${{\color{Blue}\Huge{\textsf{  SDA \}}}}\$        | 4         | 21       |
 | ${{\color{Goldenrod}\Huge{\textsf{  CSB \}}}}\$         | 5         | NC           |
 | ${{\color{Violet}\Huge{\textsf{  SDO \}}}}\$         | 6         | NC           |
 
