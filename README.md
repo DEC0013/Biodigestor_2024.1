@@ -1,26 +1,26 @@
-# Sistema de monitoramento de um biodigestor com ESP32 e Sensores
+# Sistema de monitoramento de um biodigestor com ESP32 e Sensores:
 
-## Proposta
+## Proposta:
 
 O projeto visa facilitar a operação e o monitoramento de sistemas de biodigestão, fornecendo dados precisos em tempo real sobre as condições do ambiente. Isso é crucial para o desempenho eficiente do processo de biodigestão, permitindo ajustes proativos e garantindo um funcionamento seguro e otimizado do sistema. O monitoramento contínuo das condições ambientais possibilitado pelos sensores contribui para a maximização da produção de biogás e para a sustentabilidade de sistemas de tratamento de resíduos orgânicos.
 
-## Arquitetura do Projeto
+## Arquitetura do Projeto:
 
 O projeto segue uma arquitetura onde o ESP32 coleta dados dos sensores e os envia para a plataforma Adafruit via protocolo MQTT. A plataforma Adafruit recebe os dados e os exibe em um dashboard online, permitindo o monitoramento remoto do sistema de biodigestão.
 
 ![Arquitetura do Projeto](./arch.jpg)
 
-## Hardware
+## Hardware:
 
 ### Visão Geral
 
 O projeto do sistema de monitoramento de um biodigestor com ESP32 e sensores é uma solução para monitorar e otimizar o processo de biodigestão, fornecendo dados precisos em tempo real sobre as condições ambientais. Isso é fundamental para garantir um funcionamento eficiente e seguro do sistema, maximizando a produção de biogás e contribuindo para a sustentabilidade de sistemas de tratamento de resíduos orgânicos.
 
-### Estruturação Modular do Projeto
+### Estruturação Modular do Projeto:
 
 O projeto do biodigestor foi estruturado de forma modular, segmentando o hardware em diferentes funções para facilitar o desenvolvimento, manutenção e possíveis iterações futuras. Cada componente desempenha uma função específica no monitoramento das condições do ambiente durante o processo de biodigestão.
 
-### Componentes Utilizados
+### Componentes Utilizados:
 
 - ESP32 (microcontrolador)
 - [DHT11 (sensor de temperatura e umidade)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-DHT11)
@@ -29,15 +29,15 @@ O projeto do biodigestor foi estruturado de forma modular, segmentando o hardwar
 
 No projeto de biodigestor, diferentes sensores desempenham funções específicas para monitorar as condições ambientais e garantir a eficiência e segurança do sistema. Aqui está como cada sensor funcionará:
 
-### Integração com a Plataforma Adafruit IO
+### Integração com a Plataforma Adafruit IO:
 
 Todos os dados coletados pelos sensores (MQ-2, DHT11 e BMP280) serão enviados para a plataforma Adafruit IO por meio de um ESP32. Isso permite que os dados sejam visualizados e analisados em tempo real pelos operadores, proporcionando um monitoramento abrangente do sistema de biodigestão.
 
 No link a seguir estará o passo-a-passo da integração com o [adafruit](https://github.com/JulioAmaral007/Biodigestor/tree/main/Adafruit).
 
-## Configuração de Software
+## Configuração de Software:
 
-### Pinagem
+### Pinagem:
 
 | Pino (Nome no Código) | Número do Pino | Observações                                                                     |
 | --------------------- | -------------- | ------------------------------------------------------------------------------- |
@@ -49,15 +49,15 @@ No link a seguir estará o passo-a-passo da integração com o [adafruit](https:
 
 Certifique-se de ajustar as configurações de acordo com as especificações do seu projeto.
 
-### Ambiente de Desenvolvimento
+### Ambiente de Desenvolvimento:
 
 O código-fonte foi desenvolvido na Arduino IDE, uma plataforma de desenvolvimento que permite a escrita, compilação e upload de programas para placas compatíveis com Arduino, como o ESP32 utilizado neste projeto.
 
-### Programa Final
+### Programa Final:
 
 A pasta Programas XXXXXXXXX contém o código-fonte consolidado que será executado no ESP32. Inclui a integração dos códigos de todos os sensores utilizados.
 
-## Tabela de Conteúdos
+## Tabela de Conteúdos:
 
 - [Proposta](#proposta)
 - [Componentes Utilizados](#componentes-utilizados)
@@ -65,7 +65,7 @@ A pasta Programas XXXXXXXXX contém o código-fonte consolidado que será execut
 - [Integração com a Plataforma Adafruit IO](#integração-com-a-plataforma-adafruit-io)
 - [Instruções de Execução](#instruções-de-execução)
 
-## Instruções de Execução
+## Instruções de Execução:
 
 Para executar o projeto localmente, siga estas etapas:
 
