@@ -48,7 +48,7 @@ Projetos com Arduino ou outras plataformas microcontroladas em que seja necessá
           </thead>
           <tbody>
               <tr>
-                <td style="color: red"> VCC(+5V) </td>
+                <td style="color: #FF0000"> VCC(+5V) </td>
                 <td>1</td>
                 <td>Módulo 5V</td>
               </tr>
