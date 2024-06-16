@@ -7,7 +7,7 @@ O sensor MQ-2 é fundamental para detectar a presença de gases combustíveis, c
 
 OBS: o Sensor (Detector) de Gás Inflamável / Fumaça – MQ-2 deve ser utilizado para propósitos experimentais. Não recomendamos o uso do mesmo em projetos profissionais ou que envolva segurança humana ou ambiental. Além disso, não nos responsabilizamos por eventuais danos.
 
-![SensorMQ2](./mq2.jpg)
+![SensorMQ2](./MQ2.jpg)
 
 ## Especificações e características
 
