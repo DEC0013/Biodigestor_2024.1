@@ -55,7 +55,7 @@ O código-fonte foi desenvolvido na Arduino IDE, uma plataforma de desenvolvimen
 
 ### Programa Final:
 
-A pasta Programas XXXXXXXXX contém o código-fonte consolidado que será executado no ESP32. Inclui a integração dos códigos de todos os sensores utilizados.
+A pasta Programas [codigo_final/final_code.ino](https://github.com/JulioAmaral007/Biodigestor/blob/main/codigo_final/final_code.ino) contém o código-fonte consolidado que será executado no ESP32. Inclui a integração dos códigos de todos os sensores utilizados.
 
 ## Tabela de Conteúdos:
 
@@ -79,7 +79,7 @@ Para executar o projeto localmente, siga estas etapas:
      1. Conecte o ESP32 ao seu computador.
      2. Abra o Arduino IDE.
      3. Carregue o código no ESP32.
-        - [Código Final](xxxxxxxxxx)
+        - [Código Final](https://github.com/JulioAmaral007/Biodigestor/blob/main/codigo_final/final_code.ino)
    - **Monitoramento via Adafruit IO**:
      1. Configure suas credenciais no código para conexão com a Adafruit IO.
      2. Verifique os dados em tempo real no dashboard da Adafruit IO.
