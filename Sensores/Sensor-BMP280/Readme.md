@@ -32,10 +32,10 @@ Projetos com ESP32 ou outras plataformas microcontroladas em que seja necessári
 
 | Pino          | Saída      | Pino no ESP32          |
 | ------------- | ---------- | ---------------------- |
-| ${{\color{Red}\Huge{\textsf{  VCC \}}}}\$      | 1          | XX |
-| ${{\color{Gray}\Huge{\textsf{  GND \}}}}\$      | 2         | XX   |
-| ${{\color{Lime}\Huge{\textsf{  SCL \}}}}\$       | 3         | 22      |
-| ${{\color{Blue}\Huge{\textsf{  SDA \}}}}\$        | 4         | 21       |
+| ${{\color{Red}\Huge{\textsf{  VCC \}}}}\$      | 1          | 3V3 |
+| ${{\color{Gray}\Huge{\textsf{  GND \}}}}\$      | 2         | GND   |
+| ${{\color{Lime}\Huge{\textsf{  SCL \}}}}\$       | 3         | D22      |
+| ${{\color{Blue}\Huge{\textsf{  SDA \}}}}\$        | 4         | D21       |
 | ${{\color{Goldenrod}\Huge{\textsf{  CSB \}}}}\$         | 5         | NC           |
 | ${{\color{Violet}\Huge{\textsf{  SDO \}}}}\$         | 6         | NC           |
 
