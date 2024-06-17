@@ -32,10 +32,10 @@ Projetos com Arduino ou outras plataformas microcontroladas em que seja necessá
 
 | Pino          | Saída      | Pino no ESP32          |
 | ------------- | ---------- | ---------------------- |
-| ${{\color{Red}\Huge{\textsf{  VCC(+5V) \}}}}\$    | 1          | Módulo 5V |
-| ${{\color{Gray}\Huge{\textsf{  GND \}}}}\$      | 2         | XX   |
+| ${{\color{Red}\Huge{\textsf{  VCC(+5V) \}}}}\$    | 1          | VIN |
+| ${{\color{Gray}\Huge{\textsf{  GND \}}}}\$      | 2         | GND   |
 | ${{\color{Violet}\Huge{\textsf{  Digital\ Out\ \}}}}\$       | 3         | NC      |
-| ${{\color{Lime}\Huge{\textsf{  Analog\ Out\ \}}}}\$        | 4         | 35       |
+| ${{\color{Lime}\Huge{\textsf{  Analog\ Out\ \}}}}\$        | 4         | D35       |
 
 
 ## Bibliotecas:
