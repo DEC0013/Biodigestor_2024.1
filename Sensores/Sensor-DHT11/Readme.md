@@ -31,10 +31,10 @@ Projetos com finalidade de medir umidade e temperatura ambiente utilizando ESP32
 
 | Pino          | Saída      | Pino no ESP32          |
 | ------------- | ---------- | ---------------------- |
-| ${{\color{Red}\Huge{\textsf{  VCC \}}}}\$      | 1          | xxx |
-| ${{\color{Lime}\Huge{\textsf{  Data \}}}}\$       | 2         | 4  |
+| ${{\color{Red}\Huge{\textsf{  VCC \}}}}\$      | 1          | 3V3 |
+| ${{\color{Lime}\Huge{\textsf{  Data \}}}}\$       | 2         | D4  |
 | ${{\color{Goldenrod}\Huge{\textsf{  N/C \}}}}\$       | 3         | NC      |
-| ${{\color{Gray}\Huge{\textsf{  GND \}}}}\$         | 4         | XX      |
+| ${{\color{Gray}\Huge{\textsf{  GND \}}}}\$         | 4         | GND      |
 
 
 ## Bibliotecas:
