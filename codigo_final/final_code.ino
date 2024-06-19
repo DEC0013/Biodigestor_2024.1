@@ -1,7 +1,7 @@
 // ********** Bibliotecas ***********
 
 #include "DHT.h"
-#include <MQUnifiedsensor.h>
+#include <MQSpaceData.h>
 #include <Wire.h>
 #include <WiFi.h>
 #include <Adafruit_BMP280.h>
@@ -18,7 +18,7 @@
 
 #define AIO_SERVER      "io.adafruit.com"  
 #define AIO_SERVERPORT  1883
-#define AIO_USERNAME    "your_usarname"
+#define AIO_USERNAME    "your_user"
 #define AIO_KEY         "your_key"
 WiFiClient client;
 
@@ -42,13 +42,9 @@ Adafruit_MQTT_Subscribe valve = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/fe
 #define DHTTYPE DHT11 
 
 //MQ2 Definitions
-#define Board ("ESP-32")
-#define Pin (35)  
-#define Type ("MQ-2") 
-#define Voltage_Resolution (5)
-#define ADC_Bit_Resolution (12) 
-#define RatioMQ2CleanAir (9.83) //RS / R0 = 9.83 ppm
-MQUnifiedsensor MQ2(Board, Voltage_Resolution, ADC_Bit_Resolution, Pin, Type);
+#define ADC_BIT_RESU  (12)
+#define ANALOG_PIN    (A7)
+MQSpaceData MQ(ADC_BIT_RESU, ANALOG_PIN);
 
 //RELAY Defintions
 #define RELAY 14
@@ -109,19 +105,12 @@ void setup() {
   delay(1000);
 
   //Initiate MQ2
-  MQ2.setRegressionMethod(1);
-  MQ2.setA(574.25); 
-  MQ2.setB(-2.222); 
-  MQ2.init(); 
-  float calcR0 = 0;
-  for(int i = 1; i<=10; i ++)
-  {
-    MQ2.update(); 
-    calcR0 += MQ2.calibrate(RatioMQ2CleanAir);
-  }
-  MQ2.setR0(calcR0/10);
-  if(isinf(calcR0)) {Serial.println("Warning: Conection issue, R0 is infinite (Open circuit detected) please check your wiring and supply"); while(1);}
-  if(calcR0 == 0){Serial.println("Warning: Conection issue found, R0 is zero (Analog pin shorts to ground) please check your wiring and supply"); while(1);}
+  MQ.begin();
+  MQ.RSRoMQAir(9.83);
+  MQ.setRL(10);
+  MQ.valuea(20.7074);
+  MQ.valueb(-0.36);
+  MQ.dangerousPer(17.86);
 
   //Initiate RELAY
   pinMode(RELAY, OUTPUT);
@@ -210,8 +199,7 @@ void loop() {
   delay(1000);
 
   //MQ2 Reading and Printing
-  MQ2.update();
-  MQ2_Concentration=MQ2.readSensor();
+  MQ2_Concentration=MQ.MQ2DataCH4(); 
   Serial.print(MQ2_Concentration);
   Serial.println(" PPM");
   Serial.println();
