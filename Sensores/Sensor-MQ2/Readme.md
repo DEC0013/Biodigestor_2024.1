@@ -41,7 +41,7 @@ Projetos com Arduino ou outras plataformas microcontroladas em que seja necessá
 ## Bibliotecas:
 
 ```bash 
-  #include <MQUnifiedsensor.h>
+    #include <MQSpaceData.h>
 ```
 
 ## Código:
@@ -50,19 +50,11 @@ OBS: É necessário que o sensor seja alimentado com uma tensão de 5V, assim co
 
 ```bash
 
+#include <MQSpaceData.h>
 #include <Wire.h>
 #include <WiFi.h>
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
-#include <MQUnifiedsensor.h>
-
-#define         Board                   ("ESP-32") 
-#define         Pin                     (35) 
-#define         Type                    ("MQ-2") 
-#define         Voltage_Resolution      (3.3) 
-#define         ADC_Bit_Resolution      (12) 
-#define         RatioMQ2CleanAir        (9.83) 
-MQUnifiedsensor MQ2(Board, Voltage_Resolution, ADC_Bit_Resolution, Pin, Type);
 
 #define WLAN_SSID       ""
 #define WLAN_PASS       ""
@@ -77,56 +69,37 @@ WiFiClient client;
 Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
 Adafruit_MQTT_Publish Gas = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/gas1");
 
-void setup()
-{
+#define ADC_BIT_RESU  (12) 
+#define ANALOG_PIN    (A7)
+MQSpaceData MQ(ADC_BIT_RESU, ANALOG_PIN);
 
-  Serial.begin(115200); 
+float MQ2_Concentration=0;
+
+void setup() {
+  Serial.begin(115200);  
+  
+  MQ.begin();
+  MQ.RSRoMQAir(9.83);
+  MQ.setRL(10);
+  MQ.valuea(20.7074);
+  MQ.valueb(-0.36);
+  MQ.dangerousPer(17.86);
+
+  Serial.println();
   delay(10);
-
-  MQ2.setRegressionMethod(1); //_PPM =  a*ratio^b
-  MQ2.setA(574.25); MQ2.setB(-2.222); // Configure the equation to to calculate LPG concentration
-  
-/*
-    Exponential regression:
-    Gas    | a      | b
-    H2     | 987.99 | -2.162
-    LPG    | 574.25 | -2.222
-    CO     | 36974  | -3.109
-    Alcohol| 3616.1 | -2.675
-    Propane| 658.71 | -2.168
-*/
-
-  MQ2.init(); 
- 
-  Serial.print("Calibrating please wait.");
-  float calcR0 = 0;
-  for(int i = 1; i<=10; i ++)
+  Serial.print(F("Connecting to "));
+  Serial.println(WLAN_SSID);
+  WiFi.begin(WLAN_SSID, WLAN_PASS);
+  while (WiFi.status() != WL_CONNECTED)
   {
-    MQ2.update(); 
-    calcR0 += MQ2.calibrate(RatioMQ2CleanAir);
-    Serial.print(".");
+    delay(500);
+    Serial.print(F("."));
   }
-  MQ2.setR0(calcR0/10);
-  Serial.println("  done!.");
-  
-  if(isinf(calcR0)) {Serial.println("Warning: Conection issue, R0 is infinite (Open circuit detected) please check your wiring and supply"); while(1);}
-  if(calcR0 == 0){Serial.println("Warning: Conection issue found, R0 is zero (Analog pin shorts to ground) please check your wiring and supply"); while(1);}
-
-  
-    Serial.println(WLAN_SSID);
-    WiFi.begin(WLAN_SSID, WLAN_PASS);
-    while (WiFi.status() != WL_CONNECTED)
-    {
-      delay(500);
-      Serial.print(F("."));
-    }
-    Serial.println();
-    Serial.println(F("WiFi connected"));
-    Serial.println(F("IP address: "));
-    Serial.println(WiFi.localIP());
- 
-    // connect to adafruit io
-    connect();
+  Serial.println();
+  Serial.println(F("WiFi connected"));
+  Serial.println(F("IP address: "));
+  Serial.println(WiFi.localIP());
+  connect();
 }
 
 void connect()
@@ -153,36 +126,37 @@ void connect()
     delay(10000);
   }
   Serial.println(F("Adafruit IO Connected!"));
+  
 }
 
-void loop()
-{
-  
-    // ping adafruit io a few times to make sure we remain connected
-    if(! mqtt.ping(3))
+void loop() {
+  if(!mqtt.ping(3))
+  {
+    //Reconnect to Adafruit IO
+    if(!mqtt.connected())
     {
-    // reconnect to adafruit io
-    if(! mqtt.connected())
       connect();
     }
-  
-  
-  MQ2.update(); 
-  float gaslevel = MQ2.readSensor();
-  Serial.print(gaslevel); 
+  }
+
+  delay(1000);
+
+  MQ2_Concentration=MQ.MQ2DataCH4(); 
+  Serial.print(MQ2_Concentration);
   Serial.println(" PPM");
- 
-  if (!Gas.publish(gaslevel)) {               
-      Serial.println(F("Failed"));
-    }
-  else{
-       Serial.println(F("Sent!"));
-    } 
+  Serial.println();
 
-   delay(20000);
+  
+   if(!Gas.publish(MQ2_Concentration)) 
+  {               
+    Serial.println(F("Failed"));
+  }
+  else
+  {
+    Serial.println(F("Sent!"));
+  }
 
+  delay(20000)
 }
-
-
 
 ```
