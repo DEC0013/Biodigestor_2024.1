@@ -1,5 +1,5 @@
 
-  # Solução de Problemas do Adafruit:
+  # Solução de Problemas Adafruit:
 
   Tópico criado com a finalidade de auxiliar com a solução de alguns erros comuns de integração do ESP32 com o Adafruit.
   
