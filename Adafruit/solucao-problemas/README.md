@@ -34,7 +34,7 @@ do adafruit e enviar sinal atráves do protocolo MQTT para ser interpretado com 
 
   Adafruit_MQTT_Subscribe será a variável utilizada para receber informações;<br>
 
-  Portanto, para receber o sinal digital utilize uma variavel do tipo Adafruit_MQTT_Subscribe e use o mesmo nome da feed responsável pelo envio do sinal ao nomear a variavel.
+  Portanto, para receber o sinal digital utilize uma variavel do tipo Adafruit_MQTT_Subscribe e use o mesmo nome da feed responsável pelo envio do sinal ao nomear a variável.
 
 
   #### Solução 02:
