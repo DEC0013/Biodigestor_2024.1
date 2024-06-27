@@ -22,7 +22,7 @@ O projeto do biodigestor foi estruturado de forma modular, segmentando o hardwar
 
 ### Componentes Utilizados:
 
-- ESP32 (microcontrolador)
+- [ESP32 (microcontrolador)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/ESP32)
 - [DHT11 (sensor de temperatura e umidade)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-DHT11)
 - [BMP280 (sensor de pressão atmosférica)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-BMP280)
 - [MQ-2 (sensor de gás)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-MQ2)
@@ -59,7 +59,7 @@ A pasta Programas [codigo_final/final_code.ino](https://github.com/JulioAmaral00
 
 ## Descrição dos Problemas e Soluções:
 
-Tivemos alguns problemas com os sensores DHT11, BMP280, MQ2 e com o ESP32. Para conhecer as soluções que implementamos para resolver essas questões, clique no link a seguir: [Soluções para Problemas com Sensores e ESP32]()
+Tivemos alguns problemas com os sensores DHT11, BMP280, MQ2 e com o ESP32. Para conhecer as soluções que implementamos para resolver essas questões, clique no link a seguir: [Soluções para Problemas com Sensores e ESP32](https://github.com/JulioAmaral007/Biodigestor/blob/main/Problemas)
 
 ## Instruções de Execução:
 
