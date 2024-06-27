@@ -42,4 +42,4 @@ do adafruit e enviar sinal atráves do protocolo MQTT para ser interpretado com 
   <br>
   ![](solucao01.png)
 
-  Como a imagem exibe, o mesmo valor está sendo enviado e utilizado na condicional, no local correto, para acionamento da válvula.
+  Como a imagem exibe, o mesmo valor está sendo enviado e utilizado na condicional para acionamento da válvula.
