@@ -61,7 +61,7 @@ A pasta Programas [codigo_final/final_code.ino](https://github.com/JulioAmaral00
 
 Tivemos alguns problemas com os sensores DHT11, BMP280, MQ2 e com o ESP32. Para conhecer as soluções que implementamos para resolver essas questões, clique no link a seguir: [Soluções para Problemas com Sensores e ESP32](https://github.com/JulioAmaral007/Biodigestor/blob/main/Problemas)
 
-Possíveis soluções para alguns problemas que tivemos com a integradação ESP32-Adafruit. Clique no link para ver mais: [Soluções para Problemas com Adafruit](https://github.com/JulioAmaral007/Biodigestor/tree/main/Adafruit/solucao-problemas)
+Possíveis soluções para alguns problemas que tivemos com a integração ESP32-Adafruit. Clique no link para ver mais: [Soluções para Problemas com Adafruit](https://github.com/JulioAmaral007/Biodigestor/tree/main/Adafruit/solucao-problemas)
 
 ## Instruções de Execução:
 
