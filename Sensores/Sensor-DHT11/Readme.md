@@ -171,3 +171,5 @@ void loop() {
 
 }
 ```
+## Resultados
+![serial](https://github.com/JulioAmaral007/Biodigestor/blob/main/Sensores/Sensor-DHT11/dht11-serial.jpg)

@@ -57,13 +57,9 @@ O código-fonte foi desenvolvido na Arduino IDE, uma plataforma de desenvolvimen
 
 A pasta Programas [codigo_final/final_code.ino](https://github.com/JulioAmaral007/Biodigestor/blob/main/codigo_final/final_code.ino) contém o código-fonte consolidado que será executado no ESP32. Inclui a integração dos códigos de todos os sensores utilizados.
 
-## Tabela de Conteúdos:
+## Descrição dos Problemas e Soluções:
 
-- [Proposta](#proposta)
-- [Componentes Utilizados](#componentes-utilizados)
-- [Arquitetura do Projeto](#arquitetura-do-projeto)
-- [Integração com a Plataforma Adafruit IO](#integração-com-a-plataforma-adafruit-io)
-- [Instruções de Execução](#instruções-de-execução)
+Tivemos alguns problemas com os sensores DHT11, BMP280, MQ2 e com o ESP32. Para conhecer as soluções que implementamos para resolver essas questões, clique no link a seguir: [Soluções para Problemas com Sensores e ESP32]()
 
 ## Instruções de Execução:
 

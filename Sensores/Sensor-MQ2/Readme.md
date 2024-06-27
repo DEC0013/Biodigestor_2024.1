@@ -160,3 +160,5 @@ void loop() {
 }
 
 ```
+## Resultados
+![serial](https://github.com/JulioAmaral007/Biodigestor/blob/main/Sensores/Sensor-MQ2/mq2-serial.jpg)

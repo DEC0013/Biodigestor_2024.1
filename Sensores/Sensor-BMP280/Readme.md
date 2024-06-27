@@ -169,3 +169,5 @@ Adafruit_BMP280 bmp;
     } 
 }
 ```
+## Resultados
+![serial](https://github.com/JulioAmaral007/Biodigestor/blob/main/Sensores/Sensor-BMP280/bmp280-serial.jpg)
