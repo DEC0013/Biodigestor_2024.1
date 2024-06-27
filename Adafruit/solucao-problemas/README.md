@@ -10,8 +10,7 @@
    Atentar-se na criação da variavel MQTT e checar se as seguintes condições forem executadas:<br>
    - Variável com mesmo nome da feed;
    - Alterou o endereço de envio do dado; <br> <br>
-  Segue imagem de como deve ser feito: 
-   <br>
+  Segue imagem de como deve ser feito: <br>
    ![](solucao02.png)
 
    ## Problema 02:
