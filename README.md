@@ -24,7 +24,7 @@ O projeto do biodigestor foi estruturado de forma modular, segmentando o hardwar
 
 - [ESP32 (microcontrolador)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/ESP32)
 - [DHT11 (sensor de temperatura e umidade)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-DHT11)
-- [BMP280 (sensor de pressão atmosférica)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-BMP280)
+- [BMP280 (sensor de pressão atmosférica, simulado em ambiente fechado)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-BMP280)
 - [MQ-2 (sensor de gás)](https://github.com/JulioAmaral007/Biodigestor/tree/main/Sensores/Sensor-MQ2)
 
 No projeto de biodigestor, diferentes sensores desempenham funções específicas para monitorar as condições ambientais e garantir a eficiência e segurança do sistema. Aqui está como cada sensor funcionará:
