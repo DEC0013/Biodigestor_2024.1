@@ -53,6 +53,10 @@ Certifique-se de ajustar as configurações de acordo com as especificações do
 
 O código-fonte foi desenvolvido na Arduino IDE, uma plataforma de desenvolvimento que permite a escrita, compilação e upload de programas para placas compatíveis com Arduino, como o ESP32 utilizado neste projeto.
 
+### Dashboard Monitoramento Biodigestor
+
+![](adafruit-dash.jpg)
+
 ### Programa Final:
 
 A pasta Programas [codigo_final/final_code.ino](https://github.com/JulioAmaral007/Biodigestor/blob/main/codigo_final/final_code.ino) contém o código-fonte consolidado que será executado no ESP32. Inclui a integração dos códigos de todos os sensores utilizados.
